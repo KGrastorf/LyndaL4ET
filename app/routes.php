@@ -93,3 +93,19 @@ Route::post('thanks', function()
 	$theEmail = Input::get('email');
 	return View::make('thanks')->with('theEmail', $theEmail);
 });
+
+Route::get('data', function()
+{
+	/*
+	$painting = Paintings::find(1);
+	$painting->title = 'Do No Wrong - Just Do Right';
+	$painting->save();
+	return $painting->title;
+	*/
+
+	echo '<pre>';
+	//$paintings = Paintings::all();
+	$paintings = Paintings::where('year', '=', '2011')->get();
+	var_dump($paintings->toArray());
+	echo '</pre>';
+});
