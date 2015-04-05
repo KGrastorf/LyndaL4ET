@@ -10,7 +10,7 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
+// test2
 Route::get('/', array('before' => 'newyear', 'uses' => 'HomeController@showWelcome'));
 Route::get('about', 'AboutController@showAbout');
 Route::get('about/directions', array('uses' => 'AboutController@showDirections', 'as' => 'directions'));
